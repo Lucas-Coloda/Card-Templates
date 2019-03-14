@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f3f4f4;
+    font-family: tahoma;
+}
+
+.over-hidden {
+    overflow: hidden;
+}
+
+.box {
+    height: 100hv;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 480px;
+    height: 580px;
+    margin: 2%;
+    overflow: hidden;
+    background: white;
+    box-shadow: #ccc;
+    transition: all 0.5s ease-in-out;
+}
+
+.card-cover {
+    height: 75vh;
+}
+
+.card-banner {
+    height: 220px;
+    margin-bottom: 3rem;
+}
+
+.card-banner img {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 33.5vh;
+    
+    object-fit: cover;
+    opacity: 1;
+    transition: all 0.7s ease-in-out;
+}
+
+.card-title {
+    transform: translateY(0);
+    transition: transform 0.45s ease-in-out;
+}
+
+.title {
+    font: tahoma;
+    font-size: 2.rem;
+    text-align: center;
+    letter-spacing: 0.025rem;
+
+    line-height: 1;
+    transition: font-size 0.45s ease-in-out, color 0.3s ease-out;
+}
+
+.drop-cap {
+    font-size: 55px;
+    line-height: 28px;
+}
+
+.card-details {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 1.rem;
+    max-width: 370px;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 1;
+    color: #6a6a6a;
+    transition: all 0.25 ease-in-out;
+}
+
+.card-content {
+    margin: 0 auto 6rem;
+    padding: 0 2rem;
+    max-width: 750px;
+
+    opacity: 0;
+    font-size: 1.1rem;
+    text-align: justify;
+    word-wrap: break-word;
+    
+    transition: all 1.5s ease-in-out;
+
+}
+
+.card-content p {
+    line-height: 1.8;
+    color: #3a3a3a;
+    margin-bottom: 2.5rem;
+}
+
+.card:hover {
+    box-shadow: 0 6px 50px 10px #cfcfcf;
+}
+
+.card-expanded {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 110%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.card-expanded .card-banner img {
+    opacity: 0.95;
+    width: 100vmax;
+    height: 70vh;
+    top: 0;
+}
+
+.card-expanded .title {
+    position: relative;
+    top: -60px;
+    font-size: 64px;
+    letter-spacing: 0.05em;
+    color: white;
+    text-shadow: 0 0 5px rgb(99, 99, 99), 0 0 5px rgb(12, 12, 17);
+}
+
+.card-expanded .card-details {
+    opacity: 0;
+}
+
+.card-expanded .card-content {
+    opacity: 1;
+    background-color: white;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}

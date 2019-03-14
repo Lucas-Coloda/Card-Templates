@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f3f4f4;
+  font-family: tahoma;
+}
+.over-hidden{
+  overflow: hidden;
+}
+.article-title {
+  font-size: 2.rem;
+  font: tahoma;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.025rem;
+  transition: font-size 0.45s ease-in-out, color 0.3s ease-out;
+}
+
+.header-image {
+  height: 220px;
+  background-image: url(https://wallpapercave.com/wp/wp2230816.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 3rem;
+  position: relative;
+  transition: all 0.45s ease-in-out;
+}
+
+.overlay {
+  transition: all 0.7s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.title-wrap {
+  transform: translateY(0);
+  transition: transform 0.45s ease-in-out;
+}
+
+.drop-cap {
+  font-size: 55px;
+  line-height: 28px;
+}
+
+.wrapper {
+  height: 100hv;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-cover-expert {
+  color: #6a6a6a;
+  padding: 1rem 1.rem;
+  line-height: 1.6;
+  text-align: center;
+  opacity: 1;
+  max-width: 370px;
+  margin: 0 auto;
+  display: block;
+  transition: all 0.25 ease-in-out;
+}
+
+.book-cover {
+  height: 100%;
+  width: 100%;
+
+}
+
+.book-content {
+  text-align: justify;
+  word-wrap: break-word;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: all 1.5s ease-in-out;
+  max-width: 750px;
+  margin: 0 auto 6rem;
+  padding: 0 2rem;
+}
+
+.book-content p {
+  line-height: 1.8;
+  color: #3a3a3a;
+  margin-bottom: 2.5rem;
+}
+
+.book{
+  width: 480px;
+  height: 580px;
+  margin: 2%;
+  overflow: hidden;
+  background: white;
+  box-shadow: #ccc;
+  transition: all 0.5s ease-in-out;
+}
+.book:hover{
+  box-shadow: 0 6px 50px 10px #cfcfcf;
+}
+.book-explaned{
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 110%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.book-explaned .overlay{
+  opacity: 0.95;
+}
+.book-explaned .article-title{
+  color:white;
+  text-shadow: 0 0 5px rgb(99, 99, 99), 0 0 5px rgb(12, 12, 17);
+  
+  font-size: 64px;
+  letter-spacing: 0.05em;
+  position: relative;
+  top: -300px;
+}
+.book-explaned .title-wrap{
+  transform: rotateY(-300px);
+  color: white;
+}
+.book-explaned .book-cover-expert{
+  opacity: 0;
+}
+.book-explaned .book-cover{
+  height: 460px;
+  margin-bottom: 6rem;
+}
+.book-explaned .book-content{
+  opacity: 1;
+}
+
+.book-explaned .header-image{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
